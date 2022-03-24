@@ -6,6 +6,7 @@
         <div class="row flex-grow">
           <div class="col-lg-4 mx-auto">
             <div class="auth-form-light text-left p-5">
+              <img src="/static/assets/images/logo.png" alt="" srcset="" />
               <h4>New here?</h4>
               <h6 class="font-weight-light">
                 Signing up is easy. It only takes a few steps
@@ -78,6 +79,7 @@
 
                 <div class="mt-3">
                   <input
+                    style="background: #c8342b; border: none"
                     type="submit"
                     class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn"
                     value="Register"

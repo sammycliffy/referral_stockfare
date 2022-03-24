@@ -45,6 +45,7 @@ const actions = {
 
             })
             .catch((error) => {
+                commit("loading", false)
                 console.log(error)
                 commit('error', error);
             });
@@ -54,7 +55,7 @@ const actions = {
 
 const mutations = {
     loading(state, loading) {
-        return state.loading
+        return state.loading = loading
     },
 
     error(state, error) {

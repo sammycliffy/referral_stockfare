@@ -9,7 +9,7 @@
               <div class="brand-logo">
                 <!-- <img src="../../assets/images/logo-dark.svg" /> -->
               </div>
-              <h4>Hello! let's get started</h4>
+              <h4 style="color: #c8342b">Hello! let's get started</h4>
               <h6 class="font-weight-light">Sign in to continue.</h6>
               <form class="pt-3" @submit.prevent="loginReferral">
                 <p style="color: red">{{ error }}</p>
@@ -18,7 +18,8 @@
                     type="email"
                     class="form-control form-control-lg"
                     v-model="login.email"
-                    placeholder="Username"
+                    placeholder="Email"
+                    required
                   />
                 </div>
                 <div class="form-group">
@@ -27,10 +28,12 @@
                     class="form-control form-control-lg"
                     v-model="login.password"
                     placeholder="Password"
+                    required
                   />
                 </div>
                 <div class="mt-3">
                   <input
+                    style="background: #c8342b; border: none"
                     type="submit"
                     class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn"
                     value="LOGIN"
@@ -39,12 +42,6 @@
                 <div
                   class="my-2 d-flex justify-content-between align-items-center"
                 >
-                  <div class="form-check">
-                    <label class="form-check-label text-muted">
-                      <input type="checkbox" class="form-check-input" /> Keep me
-                      signed in
-                    </label>
-                  </div>
                   <a href="#" class="auth-link text-black">Forgot password?</a>
                 </div>
 
