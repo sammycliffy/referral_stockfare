@@ -43,7 +43,7 @@
                 <div class="form-group">
                   <input
                     v-model="register.bank_name"
-                    type="tel"
+                    type="text"
                     class="form-control form-control-lg"
                     placeholder="Bank Name"
                     required
