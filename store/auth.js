@@ -23,11 +23,13 @@ const actions = {
         api.http().post('api/v1/referral/signup/', data).then((response) => {
             console.log(response)
             if (response.status === 200) {
+                commit('loading', false);
                 console.log(response);
                 this.$router.push('/dashboard')
             }
         }).catch((error) => {
-            // console.log(error.response)
+            commit('loading', false);
+            console.log(error.response)
             const error_ = error_handler.errorHandler(error.response.data)
             console.log(error_)
             commit("error", error_);
