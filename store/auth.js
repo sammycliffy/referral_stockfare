@@ -19,7 +19,7 @@ const getters = {
 const actions = {
     registerAction({ commit }, data) {
         data.phone_number =
-            "+234" + this.register.phone_number.substring(1);
+            "+234" + data.phone_number.substring(1);
         commit('loading', true);
 
         api.http().post('api/v1/referral/signup/', data).then((response) => {
