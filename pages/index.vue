@@ -36,7 +36,7 @@
                     v-model="register.phone_number"
                     type="tel"
                     class="form-control form-control-lg"
-                    placeholder="Phone Number"
+                    placeholder="Phone Number (+234)"
                     required
                   />
                 </div>
@@ -51,7 +51,7 @@
                 </div>
                 <div class="form-group">
                   <input
-                    type="text"
+                    type="number"
                     class="form-control form-control-lg"
                     v-model="register.account_number"
                     placeholder="Account number"

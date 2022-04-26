@@ -18,13 +18,12 @@ const getters = {
 
 const actions = {
     registerAction({ commit }, data) {
-        data.phone_number =
-            "+234" + data.phone_number.substring(1);
         commit('loading', true);
 
         api.http().post('api/v1/referral/signup/', data).then((response) => {
             console.log(response)
-            if (response.status === 200) {
+            if (response.status === 201) {
+
                 commit('loading', false);
                 console.log(response);
                 this.$router.push('/dashboard')
