@@ -121,8 +121,6 @@ export default {
   methods: {
     ...mapActions(["registerAction"]),
     registerReferral() {
-      this.register.phone_number =
-        "+234" + this.register.phone_number.substring(1);
       this.registerAction(this.register);
     },
   },
